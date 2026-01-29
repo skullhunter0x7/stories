@@ -1,6 +1,38 @@
+/* =========================
+   Vauxhall-inspired hub
+   ========================= */
+
+:root {
+  --hue-bg: 238;
+  --hue-fg: 255;
+  --sat-bg: 60%;
+  --sat-fg: 100%;
+  --lum-bg: 11%;
+
+  --mint: #52eea3;
+  --cool-cyan: #43cfea;
+  --light-blue: #54b6f8;
+  --blue: #437cf3;
+  --violet: #9446f8;
+  --purple: #c952ed;
+  --magenta: #e54f9b;
+
+  --bg-primary: hsl(var(--hue-bg), var(--sat-bg), var(--lum-bg));
+  --bg-secondary: hsl(var(--hue-bg), var(--sat-bg), 15%);
+  --text-normal: #e6e6e6;
+  --text-muted: #aab3c2;
+  --text-heading: #f0f3f7;
+
+  --link-color: var(--light-blue);
+
+  /* Header colors (cyan → purple gradient feel) */
+  --h1-color: var(--cool-cyan);
+  --h2-color: var(--light-blue);
+}
+
 body {
-  background: #0e1117; /* blue-black */
-  color: #e6e6e6;
+  background: var(--bg-primary);
+  color: var(--text-normal);
   font-family: Georgia, "Times New Roman", serif;
   max-width: 720px;
   margin: 4rem auto;
@@ -9,18 +41,34 @@ body {
 }
 
 h1 {
+  color: var(--h1-color);
   font-size: 2.2rem;
-  margin-bottom: 2rem;
   font-weight: normal;
-  color: #f0f3f7;
 }
 
 h2 {
+  color: var(--h2-color);
   font-size: 1.4rem;
-  margin-top: 2.5rem;
-  margin-bottom: 0.5rem;
   font-weight: normal;
-  color: #dbe3f0;
+  margin-top: 2.5rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+.meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 ul {
@@ -32,22 +80,8 @@ li {
   margin: 0.35rem 0;
 }
 
-a {
-  text-decoration: none;
-  color: #8ab4f8;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.meta {
-  font-size: 0.9rem;
-  color: #aab3c2;
-}
-
 footer {
   margin-top: 4rem;
   font-size: 0.85rem;
-  color: #8f98a8;
+  color: var(--text-muted);
 }
